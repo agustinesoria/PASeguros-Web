@@ -10,6 +10,7 @@ var flatten = require('gulp-flatten'); //Sacar solo archivos que estan en distin
 var htmlmin = require('gulp-htmlmin');
 var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
+var gls = require('gulp-live-server');
 
 //DESTINACION GENERAL
 var dir = "./source/**/*.";
@@ -53,7 +54,7 @@ gulp.task("typescript", function () {
     .pipe(bs.stream());
 })
 
-gulp.task('watch', ['browser-sync'], function () {
+gulp.task('watch', ['browser-sync', 'server'], function () {
   gulp.watch(dir + 'jade', ['jade']);
   gulp.watch(dir + 'sass', ['sass']);
   gulp.watch(dir + 'ts', ['typescript']);
@@ -101,7 +102,7 @@ gulp.task('copy', ['copy-templates', 'copy-images', 'copy-api', 'copy-dependency
 gulp.task('browser-sync', function () {
   bs.init({
     proxy: {
-      target: "http://localhost:8080"
+      target: "http://localhost:80"
     },
     notify: {
       styles: {
@@ -113,3 +114,8 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task("default", ['copy', 'jade', 'sass', 'typescript', 'watch']);
+
+gulp.task('server', function() {
+    var server=gls.static("site", 80);
+    server.start();
+});
