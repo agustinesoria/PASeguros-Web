@@ -1,0 +1,8 @@
+{
+  "globalDependencies": {
+    "google-apps-script/google-apps-script.maps": "registry:dt/google-apps-script/google-apps-script.maps#0.0.0+20160316171810",
+    "gulp": "registry:dt/gulp#3.8.0+20160316155526",
+    "handlebars": "registry:dt/handlebars#3.0.3+20160317120654",
+    "jquery": "registry:dt/jquery#1.10.0+20160417213236"
+  }
+}

@@ -1,0 +1,28 @@
+//NAVBAR ACTIVE
+- var inicio = ("Inicio" == title ? 'navbar-active':'')
+- var servicios = ("Servicios" == title ? 'navbar-active':'')
+- var nosotros = ("Nosotros" == title ? 'navbar-active':'')
+- var contactenos = ("Contactenos" == title ? 'navbar-active':'')
+- var gestion = ("Mi Gestion" == title ? 'navbar-active':'')
+- var gestion = ("Mi Gestion" == title ? 'navbar-active':'')
+nav.navbar.navbar-fixed-top
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      
+    #navbar.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li          
+          a(href='/index.html' class= inicio) Inicio
+        li
+          a(href='/servicios.html' class= servicios) Servicios
+        li
+          a(href='/nosotros.html' class= nosotros) Nosotros
+        li
+          a(href='/contacto.html' class= contactenos) Contactenos
+        li
+          a(href='/gestion.html' class= gestion) Mi Gestion

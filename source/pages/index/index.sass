@@ -1,0 +1,51 @@
+@import "../../base/sass/base.sass"
+@import "../../modules/navbar/navbar.sass"
+@import "../../modules/footer/footer.sass"
+body
+  display: flex
+//DESIGN
+.content
+  padding-top: 50px
+.content-banner
+  height: 18em
+  object-fit: cover
+  width: 100%
+.fit-banner
+  object-fit: cover
+  object-position: 0 50%
+  height: 100vh
+  // width: 100vw
+  position: inline-block
+.slider
+  position: relative
+  overflow: hidden
+  .slides
+    display: flex
+    width: 450%
+  section
+    width: 100%
+    img
+      display: block
+      width: 100%
+      height: 100vh
+      object-fit: cover
+  .btn-prev,.btn-next
+    width: 40px
+    height: 40px
+    background: $grey1
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    line-height: 40px
+    font-size: 22px
+    font-weight: bold
+    text-align: center
+    border-radius: 50%
+    font-family: monospace
+    cursor: pointer
+    &:hover
+      background: $grey2
+  .btn-prev
+    left: 10px
+  .btn-next
+    right: 10px

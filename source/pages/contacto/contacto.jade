@@ -1,0 +1,27 @@
+extends ../../base/jade/base.jade
+
+block vars
+  - var title = 'Contactenos'
+block append style
+  link(href="./css/contacto.css", rel="stylesheet")
+block append script
+  script(src="./js/contacto.js")
+block content
+  .content
+    .content-info 
+      section.contactenos
+        .title-banner Consulta
+        .valign
+          form#consulta.form-horizontal(method="post")
+            fieldset.col-md-8.col-md-push-2
+              .form-group
+                label.control-label(for='nombre') Nombre y Apellido:
+                input#nombre.form-control.input-md(name='nombre', type='text', placeholder='Ingrese su nombre y apellido', required)
+              .form-group
+                label.control-label(for='email') Dirección de Email:
+                input#email.form-control.input-md(name='email', type='text', placeholder='Ingrese su email', required)
+              .form-group
+                label.control-label(for='consulta') Consulta:
+                textarea#consulta.form-control(name='consulta',placeholder='Ingrese su consulta', required)
+            .col-md-12.text-center
+              input#enviarConsulta.button(type='submit', value='Enviar')

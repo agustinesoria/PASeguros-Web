@@ -1,0 +1,174 @@
+//VARIABLES
+$box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.12)
+$shadow2: 0 1px 3px rgba(0,0,0,.4)
+$shadow3: 0 2px 10px rgba(0,0,0,.2)
+$xxsmall:  480px  //Extra Small Cellphones
+$xsmall:  768px  //Small Cellphones
+$small:   992px  //Small Tablets
+$medium:  1200px //Medium Desktops
+$large:   1920px //Large Desktops (1920x1080 - 1920x1200)
+$xlarge:  2560px //Large Desktops (2560x1440)
+$xxlarge: 3840px //Large Desktops (3840x2160)
+
+
+//IMPORTS
+@import "./colors.sass"
+@import "./font.sass"
+@import "./link.sass"
+@import "./button.sass"
+
+body
+  background: url("../img/bgpattern.png") #CCC
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+.content
+  box-shadow: $box-shadow
+  width: 100vw
+  background-color: #EEE
+  //max-width: 100em
+  margin: 0 auto
+  padding: 70px 0px 20px
+  display: flex
+  flex: 1 auto
+  flex-direction: column
+  width: 100%
+
+.content-info
+  display: flex
+  flex: 1 auto
+  flex-direction: row-reverse
+  margin: 0
+
+@media (min-width: $xsmall)
+  .content-info
+    margin: 0 15px
+
+//Loading gif
+.loading
+  background: url("/img/snake.gif") no-repeat
+  background-position: 50%
+  background-color: white
+  background-size: inherit
+
+//RESPONSIVE
+@media (max-width: $medium)
+  body
+    font-size: 13px
+
+@media (min-width: $medium)
+  body
+    font-size: 14px
+
+@media (min-width: $xlarge)
+  body
+    font-size: 16px
+
+@media (min-width: $xxlarge)
+  body
+    font-size: 18px
+
+//FONT FAMILY
+body
+  font-family: Roboto
+ 
+//CLASE COVER BACKGROUND
+.cover
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 50%
+
+//BACK TO TOP BUTTON
+.scroll
+  color: white
+  position: fixed
+  right: 10px
+  bottom: 10px
+  cursor: pointer
+  width: 50px
+  height: 50px
+  display: none
+  background-color: $blue
+  border-radius: 60px
+  text-align: center
+  padding: 8px
+  font-size: 30px
+  box-shadow: $shadow2
+  &:hover,&:focus
+    background-color: $red
+    color: white
+    text-decoration: none
+  
+//TITULO BANNER
+.title-banner
+  margin: 0 0 0.3em
+  font-size: 2.8em
+  background-color: $blue
+  backface-visibility: hidden
+  color: white
+  padding: 15px 0 7px 2%
+  font-weight: 600
+  line-height: 1em
+  box-shadow: $box-shadow
+  user-select: none
+  cursor: default
+  font-family: Roboto
+
+//VERTICAL ALIGN CONTENT
+.valign
+  display: flex
+  flex-direction: column
+  align-content: center
+  height: calc(100% - 60px)
+  justify-content: center
+
+//FONT EXO
+/* latin-ext */
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Exo Regular'), local('Exo-Regular'), url(https://fonts.gstatic.com/s/exo/v4/J59yWLG3iwczjwZ63gnONw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Exo Regular'), local('Exo-Regular'), url(https://fonts.gstatic.com/s/exo/v4/kA_pX0U45Eb7PbHijV1x2w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Exo Medium'), local('Exo-Medium'), url(https://fonts.gstatic.com/s/exo/v4/uQ9zSuuBBpgn_AlLDDK3CfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Exo Medium'), local('Exo-Medium'), url(https://fonts.gstatic.com/s/exo/v4/cfsS7mtf7BxCwNsl8jG12A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Exo Bold'), local('Exo-Bold'), url(https://fonts.gstatic.com/s/exo/v4/v5nlgsCZqSA_Cbo_SJMfkPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Exo Bold'), local('Exo-Bold'), url(https://fonts.gstatic.com/s/exo/v4/brV063mXxrmTeVdLP9P6Kw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

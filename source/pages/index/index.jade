@@ -1,0 +1,24 @@
+extends ../../base/jade/base.jade
+
+block vars
+  - var title = 'Inicio'  
+block append style
+  link(href="./css/index.css", rel="stylesheet")
+block append script
+  //- script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.0/jquery.lazy.min.js")
+
+  script(src="./js/index.js")
+block content
+  img.fit-banner(src="http://www.seremprendedor.com.mx/wp-content/uploads/2015/08/12-Pasos-para-Convertirte-de-Empleado-a-Empresario.jpg")
+  .slider
+    .slides
+      section
+        img(src='http://www.miguelgutierrezseguros.com/images/slides/seguros_autos.jpg')
+      section
+        img(src='http://alejozammitto.com/ar/wp-content/uploads/2015/01/seguro-vida.jpg')
+      section
+        img(src='http://universidadlux.edu.mx/wp-content/uploads/2015/05/issi.jpg')
+    .btn-prev
+      &#60
+    .btn-next
+      &#62

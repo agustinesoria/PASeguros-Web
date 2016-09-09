@@ -1,0 +1,9 @@
+{
+  "name": "coac",
+  "devDependencies": {
+    "jquery": "2.2.4",
+    "bootstrap": "3.3.6",
+    "font-awesome": "Font-Awesome#4.6.3",
+    "cropit": "0.5.1"
+  }
+}
