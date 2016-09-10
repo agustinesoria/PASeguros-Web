@@ -1,5 +1,6 @@
 var gulp = require("gulp");
 var bs = require("browser-sync").create();
+// var brows = require("browser-sync");
 var jade = require("gulp-jade");
 var sass = require("gulp-sass");
 var typescript = require("gulp-typescript");
@@ -100,6 +101,11 @@ gulp.task('copy-images', function () {
 gulp.task('copy', ['copy-templates', 'copy-images', 'copy-api', 'copy-dependency']);
 
 gulp.task('browser-sync', function () {
+  // brows({
+  //   server:{
+  //     baseDir:"site"
+  //   }
+  // })
   bs.init({
     proxy: {
       target: "http://localhost:80"
@@ -112,7 +118,6 @@ gulp.task('browser-sync', function () {
     }
   });
 });
-
 gulp.task("default", ['copy', 'jade', 'sass', 'typescript', 'watch']);
 
 gulp.task('server', function() {
