@@ -1,4 +1,3 @@
-
 .navbar
   height: 50px
   margin-bottom: 0
@@ -31,6 +30,8 @@
   .navbar-right
     padding-top: 70px
     a
+      .paimg
+        background-color: transparent
       color: $grey1
       &:hover
         background-color: transparent
@@ -44,8 +45,12 @@
     &:hover,&:focus
       background: transparent
       box-shadow: inset 0 -4px 0 $blue
-  ul.logo
+  ul.nav.logo
+    background-color: transparent
     margin-left: 60px
     img
       height: 150px
       object-fit: cover
+    a
+      &:hover,&:focus
+        background-color: transparent

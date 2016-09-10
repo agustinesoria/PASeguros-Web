@@ -3,29 +3,36 @@ extends ../../base/jade/base.jade
 block vars
   - var title = 'Inicio'  
 block append style
-  link(href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.min.css", rel="stylesheet")
+  link(href="http://slideme.luigiferraresi.it/wp-content/uploads/2014/12/slideme.css", rel="stylesheet")
   link(href="./css/index.css", rel="stylesheet")
 block append script
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.min.js")
+  script(src="http://slideme.luigiferraresi.it/wp-content/uploads/2014/12/jquery.slideme2.js")
   script(src="./js/index.js")
+  script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+  script(type='text/javascript', src='https://embedmaps.com/google-maps-authorization/script.js?id=578211ec95ee84eda009d94bc38080aecb364879')
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZBxAVO5dq0vvA4pQsf5gogv4jUQ_cSek")
 block content
   img.fit-banner(src="http://www.seremprendedor.com.mx/wp-content/uploads/2015/08/12-Pasos-para-Convertirte-de-Empleado-a-Empresario.jpg")
   .empresas
     |Trabajamos con las empresas más experimentadas
     .logos
-      img.norte(src="/img/nortepng.png")
-      img.beneficio(src="/img/beneficio_marca.png")
-      img.escudo(src="/img/escudopng.png")
-      img.liderar(src="/img/liderarpng.png")
-  .slider
-    .slides
-      section
-        img(src='http://www.miguelgutierrezseguros.com/images/slides/seguros_autos.jpg')
-      section
-        img(src='http://alejozammitto.com/ar/wp-content/uploads/2015/01/seguro-vida.jpg')
-      section
-        img(src='http://universidadlux.edu.mx/wp-content/uploads/2015/05/issi.jpg')
-    .btn-prev
-      |&#60
-    .btn-next
-      |&#62
+      a(href="https://www.elnorte.com.ar/",target="_blank")
+        img.norte(src="/img/norteimg.jpg")
+      a(href="http://www.beneficioweb.com.ar/",target="_blank")
+        img.beneficio(src="/img/beneficio_marca.png")
+      a(href="http://www.escudoseguros.com.ar/",target="_blank")
+        img.escudo(src="/img/escudopng.png")
+      a(href="http://www.liderarseguros.com.ar/",target="_blank")
+        img.liderar(src="/img/liderarpng.png")
+  #slider
+    span.fa.fa-chevron-circle-left
+    span.fa.fa-chevron-circle-right
+    ul.slideme
+      li
+        img(src="http://www.auto-types.com/images/_autonews/2012-Ford-Focus-front_94_10.jpeg")
+      li
+        img(src="http://www.pakqatar.com.pk/family/mainImages/family-group.jpg")
+      li
+        img(src="http://decorate.thelivingstonecompany.com/wp-content/uploads/2015/09/Southern-House-Plans-Wraparound-Porch.jpg")
+      li
+        img(src="http://www.deangroup-int.co.uk/wp-content/uploads/2015/10/female-engineer-in-the-field-iStock_000011202267_Medium-1024x768.jpg")
