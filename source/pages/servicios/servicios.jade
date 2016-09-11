@@ -9,3 +9,41 @@ block append script
   script(src="./js/servicios.js")
 block content
   .content
+    .descripcion
+      |Ofrecemos un servicio de calidad para tus bienes más preciados
+    .container.tabs
+      ul.nav.nav-tabs.nav-justified
+        li.active
+          a(href='#') Vehiculos
+        li
+          a(href='#') Hogar
+        li
+          a(href='#') Trabajo
+        li
+          a(href='#') Vida
+      .container
+        table.table
+          thead
+            tr
+              th Tipo de seguro
+              th Monto asegurado
+              th Grua
+              th Contra terceros
+          tbody
+            tr
+              td Contra terceros
+              td $3000
+              td Sí
+              td Sí
+            tr
+              td Robo / Incendios
+              td $6000
+              td Sí
+              td Sí
+            tr
+              td Granizo
+              td $9000
+              td Sí
+              td Sí
+    button.btn.btn-success.btn-lg(type='submit')
+      | Cotizar
