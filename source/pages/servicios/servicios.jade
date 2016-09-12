@@ -10,7 +10,7 @@ block append script
 block content
   .content
     .descripcion
-      |Ofrecemos un servicio de calidad para tus bienes más preciados
+      p Ofrecemos un servicio de calidad para tus bienes más preciados
     .container.tabs
       ul.nav.nav-tabs.nav-justified
         li.active
@@ -45,5 +45,6 @@ block content
               td $9000
               td Sí
               td Sí
-    button.btn.btn-success.btn-lg(type='submit')
-      | Cotizar
+    a(href='/gestion.html')
+      button.btn.btn-success.btn-lg
+        | Cotizar
