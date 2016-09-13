@@ -1,27 +1,37 @@
 @import "../../base/sass/base.sass"
-// @import "../../modules/navbar/navbar.sass"
+@import "../../modules/navbar/navbar.sass"
 
+.content
+  padding-top: 250px 
+  color: $grey3
+  background-color: $blue
+  text-align: center
+  font-size: 2.5em
+  padding-left: 20px
+  padding-right: 20px
 .contactenos
+  font-size: 0.6em
+  text-align: left
   width: 100%
-  .title-banner
-    color: $white
+  // .title-banner
+  //   color: $white
   .valign
     padding: 0
     fieldset
       padding: 20px 20px 0
       vertical-align: middle
       label
-        margin-bottom: 0.25em
+        // margin-bottom: 0.25em
         font-size: 1.2em
   .form-control
-    font-size: 1.2em
+    font-size: 0.8em
   textarea.form-control
     min-height: 150px 
     resize: none
   .button
     display: block
     margin: 1.43em auto 0
-    color: $green;
+    color: $grey3;
     border-color: $green
     background: transparent
     margin-bottom: 20px
@@ -29,7 +39,8 @@
       color: #EEE
       border-color: $green
       background: $green
-
+.datoscontacto
+  font-size: 0.8em
 @media (min-width: $xsmall)
   .contactenos
     .valign

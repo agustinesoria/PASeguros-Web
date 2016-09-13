@@ -8,9 +8,10 @@ block append script
   script(src="./js/contacto.js")
 block content
   .content
+    p Rellene el formulario para que uno de nuestros agentes se comunique con usted en la brevedad
+    br
     .content-info 
       section.contactenos
-        .title-banner Consulta
         .valign
           form#consulta.form-horizontal(method="post")
             fieldset.col-md-8.col-md-push-2
@@ -25,3 +26,11 @@ block content
                 textarea#consulta.form-control(name='consulta',placeholder='Ingrese su consulta', required)
             .col-md-12.text-center
               input#enviarConsulta.button(type='submit', value='Enviar')
+    p Otros datos de contacto
+    br
+    .datoscontacto
+      p Horario de atención
+      p Lunes a Viernes 8:30 a 13:00 - 16:30 a 20:00
+      p Sabados 9:00 a 12:30
+      .fa.fa-phone +54 353 4530766
+      
