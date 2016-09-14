@@ -5,7 +5,122 @@ block vars
 block append style
   link(href="./css/servicios.css", rel="stylesheet")
 block append script
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js") 
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.0.0/jquery.smooth-scroll.min.js")
   script(src="./js/servicios.js")
 block content
   .content
+    .descripcion
+      h1 Ofrecemos un servicio de calidad para tus bienes más preciados
+    .container
+      .navegacion
+        a(href='#Vehiculos') Vehiculos
+        a(href='#Hogar') Hogar
+        a(href='#Trabajo') Trabajo
+        a(href='#Vida') Vida
+      table.table
+        h3 
+          #Vehiculos Vehiculos
+        thead
+          tr
+            th Tipo de seguro
+            th Monto asegurado
+            th Grua
+            th Contra terceros
+        tbody
+          tr
+            td Contra terceros
+            td $3000
+            td Sí
+            td Sí
+          tr
+            td Robo / Incendios
+            td $6000
+            td Sí
+            td Sí
+          tr
+            td Granizo
+            td $9000
+            td Sí
+            td Sí
+
+      table.table
+        h3
+          #Hogar Hogar
+        thead
+          tr
+            th Tipo de seguro
+            th Monto asegurado
+            th Grua
+            th Contra terceros
+        tbody
+          tr
+            td Contra terceros
+            td $3000
+            td Sí
+            td Sí
+          tr
+            td Robo / Incendios
+            td $6000
+            td Sí
+            td Sí
+          tr
+            td Granizo
+            td $9000
+            td Sí
+            td Sí
+
+      table.table
+        h3
+          #Trabajo Trabajo
+        thead
+          tr
+            th Tipo de seguro
+            th Monto asegurado
+            th Grua
+            th Contra terceros
+        tbody
+          tr
+            td Contra terceros
+            td $3000
+            td Sí
+            td Sí
+          tr
+            td Robo / Incendios
+            td $6000
+            td Sí
+            td Sí
+          tr
+            td Granizo
+            td $9000
+            td Sí
+            td Sí
+
+      table.table
+        h3
+          #Vida Vida
+        thead
+          tr
+            th Tipo de seguro
+            th Monto asegurado
+            th Grua
+            th Contra terceros
+        tbody
+          tr
+            td Contra terceros
+            td $3000
+            td Sí
+            td Sí
+          tr
+            td Robo / Incendios
+            td $6000
+            td Sí
+            td Sí
+          tr
+            td Granizo
+            td $9000
+            td Sí
+            td Sí
+    a(href='/gestion.html')
+      button.btn.btn-success.btn-lg
+        | Cotizar
