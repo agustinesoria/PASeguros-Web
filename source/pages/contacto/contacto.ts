@@ -1,6 +1,7 @@
 $(document).ready(function ($) {
   //=include ../../base/ts/base.ts    
   //=include ../../modules/navbar/navbar.ts
+  
   $("#consulta").submit(function (e) {
     e.preventDefault();
     var required = $(this).find("input:required , textarea:required");
