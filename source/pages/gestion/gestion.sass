@@ -5,13 +5,54 @@
   color: $grey1
   font-size: 2em
 .formularios
-  height: 450px
+  min-height: 450px
   width: 100%
   background-color: $blue
   text-align: center
   color: $grey3
+  .pdf
+    float: left
+    img
+    cursor: pointer
   h2
     margin-top: 220px
     margin-bottom: 50px
   a
     margin-right: 80px
+    color: $grey3
+    text-decoration: none
+.cotizador
+  color: $grey1
+  font-size: 2em
+  text-align: center
+.contactenos
+  margin-top: 60px
+  font-size: 0.6em
+  text-align: left
+  width: 100%
+  // .title-banner
+  //   color: $white
+  .valign
+    padding: 0
+    fieldset
+      padding: 20px 20px 0
+      vertical-align: middle
+      label
+        // margin-bottom: 0.25em
+        font-size: 1.2em
+  .form-control
+    font-size: 0.8em
+  textarea.form-control
+    min-height: 150px 
+    resize: none
+  .button
+    display: block
+    margin: 1.43em auto 0
+    color: $grey1;
+    border-color: $green
+    background: transparent
+    margin-bottom: 20px
+    &:hover,&:active,&:focus
+      color: #EEE
+      border-color: $green
+      background: $green
