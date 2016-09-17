@@ -8,17 +8,18 @@
   cursor: default
   .container-fluid
     background: $white
-    // background-color: rgba(0, 0, 0, 0.3)
+    opacity: 0.9
+    // background-color: transparent
     padding-left: 0px
     padding-right: 0px
+    height: auto
     .navbar-header
       padding: 0 30px
   .collapse
     width: 100%
-  .navbar-toggle
-    float: left 
-    .icon-bar
-      background-color: transparent
+  // .navbar-toggle
+  //   float: left 
+  //   .icon-bar
   .navbar-collapse
     margin: 0
     padding: 0
@@ -29,6 +30,7 @@
         background-color: transparent
   .navbar-right
     padding-top: 70px
+    transition: 300ms ease-in-out
     a
       .paimg
         background-color: transparent
@@ -51,6 +53,7 @@
     img
       height: 150px
       object-fit: cover
+      transition: 300ms ease-in-out
     a
       &:hover,&:focus
         background-color: transparent

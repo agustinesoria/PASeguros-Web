@@ -19,7 +19,7 @@ var pages = "./source/pages/**/*.";
 
 //TAREAS
 gulp.task('jade', function () {
-  gulp.src(["!./source/pages/admin/{articulo,notification,socio}/*.jade",pages + "jade"])
+  gulp.src(["!./source/pages/admin/{articulo,notification,socio}/*.jade", pages + "jade"])
     .pipe(plumber())
     .pipe(jade())
     .pipe(flatten())
@@ -31,7 +31,7 @@ gulp.task('jade', function () {
 });
 
 gulp.task('sass', function () {
-  gulp.src(["!./source/pages/admin/{articulo,notification,socio}/*.sass",pages + "sass"])
+  gulp.src(["!./source/pages/admin/{articulo,notification,socio}/*.sass", pages + "sass"])
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
@@ -44,8 +44,8 @@ gulp.task('sass', function () {
     .pipe(bs.stream());
 });
 
-gulp.task("typescript", function () {  
-  gulp.src(["!./source/pages/admin/{articulo,notification,socio}/*.ts",pages + "ts"])
+gulp.task("typescript", function () {
+  gulp.src(["!./source/pages/admin/{articulo,notification,socio}/*.ts", pages + "ts"])
     .pipe(plumber())
     .pipe(include())
     .pipe(typescript())
@@ -108,7 +108,7 @@ gulp.task('browser-sync', function () {
   // })
   bs.init({
     proxy: {
-      target: "http://localhost:80"
+      target: "http://localhost:8080"
     },
     notify: {
       styles: {
@@ -120,7 +120,7 @@ gulp.task('browser-sync', function () {
 });
 gulp.task("default", ['copy', 'jade', 'sass', 'typescript', 'watch']);
 
-gulp.task('server', function() {
-    var server=gls.static("site", 80);
-    server.start();
+gulp.task('server', function () {
+  var server = gls.static("./site", 8080);
+  server.start();
 });
