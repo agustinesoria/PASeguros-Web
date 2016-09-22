@@ -3,10 +3,11 @@ extends ../../base/jade/base.jade
 block vars
   - var title = 'Inicio'  
 block append style
-  link(href="http://slideme.luigiferraresi.it/wp-content/uploads/2014/12/slideme.css", rel="stylesheet")
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css", rel="stylesheet")
   link(href="./css/index.css", rel="stylesheet")
 block append script
-  script(src="http://slideme.luigiferraresi.it/wp-content/uploads/2014/12/jquery.slideme2.js")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js')
   script(src="./js/index.js")
   script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
   script(type='text/javascript', src='https://embedmaps.com/google-maps-authorization/script.js?id=578211ec95ee84eda009d94bc38080aecb364879')
@@ -24,6 +25,15 @@ block content
         img.escudo(src="/img/escudopng.png" alt="Escudo Seguros")
       a(href="http://www.liderarseguros.com.ar/",target="_blank")
         img.liderar(src="/img/liderarpng.png" alt="Liderar Seguros")
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide(style='background-image:url(http://www.auto-types.com/images/_autonews/2012-Ford-Focus-front_94_10.jpeg)')
+      .swiper-slide(style='background-image:url(http://www.pakqatar.com.pk/family/mainImages/family-group.jpg)')
+      .swiper-slide(style='background-image:url(http://decorate.thelivingstonecompany.com/wp-content/uploads/2015/09/Southern-House-Plans-Wraparound-Porch.jpg)')
+      .swiper-slide(style='background-image:url(http://www.deangroup-int.co.uk/wp-content/uploads/2015/10/female-engineer-in-the-field-iStock_000011202267_Medium-1024x768.jpg)')
+    .swiper-pagination
+    .swiper-button-next
+    .swiper-button-prev
   //- #slider
   //-   //- span.fa.fa-chevron-circle-left
   //-   //- span.fa.fa-chevron-circle-right

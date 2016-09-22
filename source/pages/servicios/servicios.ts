@@ -9,8 +9,11 @@ $(document).ready(function() {
     $('.container').css('padding-top','0');
   }
 });
-$('.navegacion').click(function () {
-  $("html, body").animate({ scrollTop: 0 }, 600);
+$('.navegacion').find('a').click(function (e) {
+	e.preventDefault();
+	var direccion= $(e.target).attr('href');
+	console.log(direccion);
+  $("html, body").animate({ scrollTop: $(direccion).offset().top }, 600);
   return false;
 });
   // $(function() {
