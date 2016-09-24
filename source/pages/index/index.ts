@@ -5,6 +5,7 @@ $(document).ready(function ($) {
         pagination: '.swiper-pagination',
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
+        speed: 800,
         paginationClickable: true,
         spaceBetween: 30,
         centeredSlides: true,

@@ -13,7 +13,10 @@ block append script
   script(type='text/javascript', src='https://embedmaps.com/google-maps-authorization/script.js?id=578211ec95ee84eda009d94bc38080aecb364879')
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZBxAVO5dq0vvA4pQsf5gogv4jUQ_cSek")
 block content
-  img.fit-banner(src="http://www.seremprendedor.com.mx/wp-content/uploads/2015/08/12-Pasos-para-Convertirte-de-Empleado-a-Empresario.jpg")
+  .portada(style='background-image:url(https://6sigma.com/wp-content/uploads/2013/08/6Sigma_slideroption2.jpg)')
+    .presentacion
+      h1 Productores asociados
+      p aseguradores de tus bienes más preciados
   .empresas
     |Trabajamos con las empresas más experimentadas
     .logos
@@ -26,26 +29,14 @@ block content
       a(href="http://www.liderarseguros.com.ar/",target="_blank")
         img.liderar(src="/img/liderarpng.png" alt="Liderar Seguros")
   .swiper-container
+    a(href='/servicios.html')
+      button.btn.btn-success.btn-lg
+        | Conoce más
     .swiper-wrapper
-      .swiper-slide(style='background-image:url(http://www.auto-types.com/images/_autonews/2012-Ford-Focus-front_94_10.jpeg)')
-      .swiper-slide(style='background-image:url(http://www.pakqatar.com.pk/family/mainImages/family-group.jpg)')
-      .swiper-slide(style='background-image:url(http://decorate.thelivingstonecompany.com/wp-content/uploads/2015/09/Southern-House-Plans-Wraparound-Porch.jpg)')
-      .swiper-slide(style='background-image:url(http://www.deangroup-int.co.uk/wp-content/uploads/2015/10/female-engineer-in-the-field-iStock_000011202267_Medium-1024x768.jpg)')
+      .swiper-slide(style='background-image:url(/img/car.jpg)') Asegura tus vehiculos
+      .swiper-slide(style='background-image:url(/img/fam.jpg)') Asegura tu familia
+      .swiper-slide(style='background-image:url(http://www.archipro.co.nz/assets/Uploads/_resampled/background-Kuaotunu-House-2.jpg)') Asegura tu hogar
+      .swiper-slide(style='background-image:url(http://www.deangroup-int.co.uk/wp-content/uploads/2015/10/female-engineer-in-the-field-iStock_000011202267_Medium-1024x768.jpg)') Asegura a tus empleados
     .swiper-pagination
     .swiper-button-next
     .swiper-button-prev
-  //- #slider
-  //-   //- span.fa.fa-chevron-circle-left
-  //-   //- span.fa.fa-chevron-circle-right
-  //-   a(href='/servicios.html')
-  //-     button.btn.btn-success.btn-lg
-  //-       | Ver Mas >
-  //-   ul.slideme
-  //-     li
-  //-       img(src="http://www.auto-types.com/images/_autonews/2012-Ford-Focus-front_94_10.jpeg")
-  //-     li
-  //-       img(src="http://www.pakqatar.com.pk/family/mainImages/family-group.jpg")
-  //-     li
-  //-       img(src="http://decorate.thelivingstonecompany.com/wp-content/uploads/2015/09/Southern-House-Plans-Wraparound-Porch.jpg")
-  //-     li
-  //-       img(src="http://www.deangroup-int.co.uk/wp-content/uploads/2015/10/female-engineer-in-the-field-iStock_000011202267_Medium-1024x768.jpg")

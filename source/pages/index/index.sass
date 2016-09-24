@@ -4,19 +4,19 @@
 body
   display: flex
 //DESIGN
-.content
-  padding-top: 50px
-.content-banner
-  height: 18em
-  object-fit: cover
-  width: 100%  
-.fit-banner
-  // margin-top: 180px
-  object-fit: cover
-  object-position: 0 50%
+.portada
   height: 100vh
-  // width: 100vw
-  position: inline-block
+  background-size: cover
+  display: flex
+  align-items: center 
+  .presentacion
+    margin-left: 3em
+    color: $black
+    h1
+      font-size: 5em
+    p
+      text-align: right
+      font-size: 2em
 .empresas
   min-height: 250px
   background-color: $white
@@ -30,19 +30,31 @@ body
   .logos
     margin: auto
   img
-    margin-right: 105px
-    margin-top: 25px
+    margin: 25px 50px 0 50px
     height: 70px
     cursor: pointer
 .swiper-container
   width: 100%
   height: 100vh
+  position: relative
+  z-index: 1
   .swiper-slide
+    position: relative
+    display: flex
+    padding-top: 4em
+    padding-left: 3em
     background-position: center
     background-size: cover
+    color: $black
+    font-size: 4em
+  .btn
+    position: absolute
+    z-index: 2
+    top: 35%
+    left: 18%
+    
 .googleMap
   height: 100%
-  // margin: -35px
 #error_
   display: none
 
