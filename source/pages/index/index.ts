@@ -2,9 +2,6 @@ $(document).ready(function ($) {
   //=include ../../base/ts/base.ts
   //=include ../../modules/navbar/navbar.ts
   var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
         speed: 800,
         paginationClickable: true,
         spaceBetween: 30,
@@ -12,7 +9,7 @@ $(document).ready(function ($) {
         effect: 'fade',
         loop: true,
         autoplay: 4500,
-        autoplayDisableOnInteraction: false
+        autoplayDisableOnInteraction: true
     });
 
 
