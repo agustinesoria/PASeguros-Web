@@ -8,7 +8,7 @@ block append script
   script(src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js")
   script(src="./js/gestion.js")
 block content
-  .formularios
+  section.formularios
     h2 Si sos asegurado descargá nuestros formularios de siniestros
     .pdf
       a(href="#",target="_blank")
@@ -27,8 +27,8 @@ block content
           figure
             img(src='/img/pdf.png', alt='Descargar PDF')
             figcaption Siniestro Escudo (tercero)
-  .cotizador
-    p Rellene el cotizador para que uno de nuestros agentes se comuniquen con usted en la brevedad
+  section.cotizador
+    h2 Rellene el cotizador para que uno de nuestros agentes se comunique con usted en la brevedad
     br
     section.contactenos
           .valign

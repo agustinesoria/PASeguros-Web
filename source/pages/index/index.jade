@@ -13,11 +13,11 @@ block append script
   script(type='text/javascript', src='https://embedmaps.com/google-maps-authorization/script.js?id=578211ec95ee84eda009d94bc38080aecb364879')
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZBxAVO5dq0vvA4pQsf5gogv4jUQ_cSek")
 block content
-  .portada(style='background-image:url(https://6sigma.com/wp-content/uploads/2013/08/6Sigma_slideroption2.jpg)')
+  section.portada(style='background-image:url(https://6sigma.com/wp-content/uploads/2013/08/6Sigma_slideroption2.jpg)')
     .presentacion
       h1 Productores asociados
-      p aseguradores de tus bienes más preciados
-  .empresas
+      h2 aseguradores de tus bienes más preciados
+  section.empresas
     |Trabajamos con las empresas más experimentadas
     .logos
       a(href="https://www.elnorte.com.ar/",target="_blank")
@@ -28,7 +28,7 @@ block content
         img.escudo(src="/img/escudopng.png" alt="Escudo Seguros")
       a(href="http://www.liderarseguros.com.ar/",target="_blank")
         img.liderar(src="/img/liderarpng.png" alt="Liderar Seguros")
-  .swiper-container
+  section.swiper-container
     a(href='/servicios.html')
       button.btn.btn-success.btn-lg
         | Conoce más

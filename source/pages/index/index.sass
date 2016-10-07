@@ -5,60 +5,60 @@ body
   display: flex
 //DESIGN
 .portada
-  height: 100vh
+  align-items: center 
   background-size: cover
   background-position: center
   display: flex
-  align-items: center 
+  height: 100vh
   .presentacion
-    margin-left: 3em
     color: $black
+    margin-left: 3em
     h1
       font-size: 5em
       text-align: right
-    p
-      text-align: right
+    h2
       font-size: 2em
+      text-align: right
 .empresas
-  min-height: 250px
   background-color: $white
-  text-align: center
   color: $black
-  padding: 50px
-  font-size: 2em
-  padding-left: 40px
   display: flex
+  font-size: 2em
   flex-direction: column
+  min-height: 250px
+  padding: 50px
+  text-align: center
+  padding-left: 40px
   .logos
     margin: auto
     margin-top: 40px
   img
-    margin: 25px 50px 0 50px
-    height: 70px
     cursor: pointer
+    height: 70px
+    margin: 25px 50px 0 50px
 .swiper-container
-  width: 100%
   height: 100vh
   position: relative
+  width: 100%
   z-index: 1
   .swiper-slide
-    position: relative
-    display: flex
-    padding-top: 4em
-    padding-left: 3em
     background-position: center
     background-size: cover
     color: $black
+    display: flex
     font-size: 4em
+    padding-top: 4em
+    padding-left: 3em
+    position: relative
     span
-      position: absolute
       left: 10%
+      position: absolute
       top: 20%
   .btn
-    position: absolute
-    z-index: 2
-    top: 30%
     left: 10%
+    position: absolute
+    top: 30%
+    z-index: 2
     
 .googleMap
   height: 100%
