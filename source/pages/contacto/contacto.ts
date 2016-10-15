@@ -2,7 +2,7 @@ $(document).ready(function ($) {
   //=include ../../base/ts/base.ts    
   //=include ../../modules/navbar/navbar.ts
   
-  $("#consulta").submit(function (e) {
+  $("#contacto").submit(function (e) {
     e.preventDefault();
     var required = $(this).find("input:required , textarea:required");
     var ready = true;
@@ -23,8 +23,11 @@ $(document).ready(function ($) {
         closeOnConfirm: false,
         closeOnCancel: false
       }, function (isConfirm) {
+        console.log(isConfirm);
         if (isConfirm) {
-          $.post("/api/consulta", { nombre: $("#nombre").val() , email: $("#email").val() , consulta: $("#consulta").val()}, function (res) {
+          console.log("res");
+          $.post("../mail.php", { nombre: $("#nombre").val() , email: $("#email").val() , consulta: $("#consulta").val()}, function (res) {
+            console.log(res);
             if (!res) return;
             res = JSON.parse(res);
             if (res.status == 200)

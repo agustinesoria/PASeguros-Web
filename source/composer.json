@@ -1,0 +1,9 @@
+{
+  "name": "dependencies",
+  "description": "",
+  "require": {
+    "slim/slim": "3.4.2",
+    "slim/twig-view": "^2.1",
+    "phpmailer/phpmailer": "^5.2"
+  }
+}
