@@ -11,7 +11,7 @@ $(document).ready(function ($) {
         autoplay: 4500,
         autoplayDisableOnInteraction: true
     });
-
+});
 
 //   function initMap() {
 //     var city = 'Productores Asociados - Seguros Generales';
@@ -35,4 +35,3 @@ $(document).ready(function ($) {
 //     infowindow.open(map, marker);
 //   }
 //   google.maps.event.addDomListener(window, 'load', initMap);
-// });

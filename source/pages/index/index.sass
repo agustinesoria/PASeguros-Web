@@ -30,30 +30,121 @@ body
   padding: 50px
   text-align: center
   padding-left: 40px
+  h3
+    color: $black
+    font-size: 1em
   .logos
     margin: auto
     margin-top: 40px
   img
     cursor: pointer
-    height: 70px
-    margin: 25px 50px 0 50px
-.swiper-container
-  height: 100vh
-  width: 100%
-  .swiper-slide
-    background-position: center
-    background-size: cover
+    height: 80px
+    margin: 25px 50px 20px 50px
+    
+.clientes
+  background-color: $white
+  color: $black
+  display: flex
+  font-size: 2em
+  flex-direction: column
+  min-height: 250px
+  padding: 50px
+  text-align: center
+  padding-left: 40px
+  h3
     color: $black
-    display: flex
-    font-size: 4em
-    flex-direction: column
-    padding-top: 4em
-    padding-left: 3em
-    position: relative
-    a
-      display: table
-.googleMap
-  height: 100%
+    font-size: 1em
+    text-align: center
+    margin-bottom: 2em
+.servicios
+  background-color: $white
+  color: $black
+  display: flex
+  flex-direction: column
+  min-height: 250px
+  padding: 20px
+  h3
+    color: $black
+    font-size: 2em
+    text-align: center
+    margin-bottom: 2em
+  p
+    margin: 10px 80px 20px
+    line-height: 1
+    font-size: 1.5em
+    font-family: Serif
+
+  main
+    min-width: 320px
+    // max-width: 800px
+    // padding: 50px
+    // margin: 0 auto
+    // background: #fff
+
+  section
+    display: none
+    padding: 20px 0 0
+    border-top: 1px solid #ddd
+
+  input
+    display: none
+
+  label
+    display: inline-block
+    margin: 0 0 -1px
+    padding: 15px 25px
+    font-weight: 600
+    text-align: center
+    // color: #bbb
+    border: 1px solid transparent
+    font-size: 1em
+    &:before
+      font-family: fontawesome
+      font-weight: normal
+      margin-right: 10px
+    &[for*='1']:before
+      content: '\f1b9'
+    &[for*='2']:before
+      content: '\f207'
+    &[for*='3']:before
+      content: '\f0d1'
+    &[for*='4']:before
+      content: '\f134'
+    &[for*='5']:before
+      content: '\f023'
+    &[for*='6']:before
+      content: '\f015'
+    &[for*='7']:before
+      content: '\f1ad'
+    &[for*='8']:before
+      content: '\f134'
+    &[for*='9']:before
+      content: '\f0c0'
+    &[for*='10']:before
+      content: '\f071'
+    &:hover
+      color: #888
+      cursor: pointer
+
+  input:checked + label
+    color: #555
+    border: 1px solid #ddd
+    border-top: 2px solid $blue
+    border-bottom: 1px solid #fff
+
+  #tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4, #tab5:checked ~ #content5, #tab6:checked ~ #content6, #tab7:checked ~ #content7, #tab8:checked ~ #content8, #tab9:checked ~ #content9, #tab10:checked ~ #content10
+    display: block
+
+  @media screen and (max-width: 650px)
+    label
+      font-size: 0
+      &:before
+        margin: 0
+        font-size: 18px
+
+  @media screen and (max-width: 400px)
+    label
+      padding: 15px
 #error_
   display: none
 
