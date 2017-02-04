@@ -3,14 +3,17 @@
 @import "../../modules/footer/footer.sass"
 body
   display: flex
-  background-color: $blue
+  background-color: white
 //DESIGN
 .portada
   align-items: center 
   background-size: cover
   background-position: center
+  background-repeat: no-repeat
+  // background-attachment: fixed
   display: flex
   height: 100vh
+  margin-bottom: 100px
   .presentacion
     color: $black
     margin-left: 3em
@@ -21,48 +24,36 @@ body
       font-size: 2em
       text-align: right
 .empresas
-  background-color: $white
   color: $black
   display: flex
   font-size: 2em
   flex-direction: column
   min-height: 250px
-  padding: 50px
   text-align: center
-  padding-left: 40px
+  margin-bottom: 100px
+  justify-content: space-around
   h3
     color: $black
     font-size: 1em
   .logos
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
     margin: auto
     margin-top: 40px
   img
-    cursor: pointer
     height: 80px
-    margin: 25px 50px 20px 50px
+    margin: 25px 50px 80px 50px
     
-.clientes
-  background-color: $white
-  color: $black
-  display: flex
-  font-size: 2em
-  flex-direction: column
-  min-height: 250px
-  padding: 50px
-  text-align: center
-  padding-left: 40px
-  h3
-    color: $black
-    font-size: 1em
-    text-align: center
-    margin-bottom: 2em
+
 .servicios
-  background-color: $white
   color: $black
   display: flex
   flex-direction: column
-  min-height: 250px
+  min-height: 500px
   padding: 20px
+  margin-bottom: 100px
   h3
     color: $black
     font-size: 2em
@@ -72,7 +63,6 @@ body
     margin: 10px 80px 20px
     line-height: 1
     font-size: 1.5em
-    font-family: Serif
 
   main
     min-width: 320px
@@ -85,7 +75,31 @@ body
     display: none
     padding: 20px 0 0
     border-top: 1px solid #ddd
-
+    font-family: Open Sans
+  .categorias
+    margin: 100px 0
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    color: black
+    .categoria
+      border-radius: 30px
+      width: 30%
+      text-align: center
+      padding: 20px 0 20px 0
+      margin: 10px
+      h4
+        font-weight: bold
+        margin-bottom: 20px
+      p
+        text-align: left
+      a
+        font-size: 1.5em
+        text-decoration: none
+        &:after
+          font-family: fontawesome
+          margin-left: 10px
+          content: '\f061'
   input
     display: none
 
@@ -95,12 +109,12 @@ body
     padding: 15px 25px
     font-weight: 600
     text-align: center
-    // color: #bbb
     border: 1px solid transparent
     font-size: 1em
     &:before
       font-family: fontawesome
       font-weight: normal
+      font-size: 1.2em
       margin-right: 10px
     &[for*='1']:before
       content: '\f1b9'
@@ -134,6 +148,49 @@ body
 
   #tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4, #tab5:checked ~ #content5, #tab6:checked ~ #content6, #tab7:checked ~ #content7, #tab8:checked ~ #content8, #tab9:checked ~ #content9, #tab10:checked ~ #content10
     display: block
+    
+.clientes
+  color: $black
+  display: flex
+  font-size: 2em
+  flex-direction: column
+  min-height: 250px
+  padding: 50px
+  text-align: center
+  padding-left: 40px
+  margin-bottom: 100px
+  h3
+    color: $black
+    font-size: 1em
+    text-align: center
+    margin-bottom: 1em
+  .logos
+    margin: auto
+    margin-top: 40px
+  img
+    height: 80px
+    margin: 25px 50px 80px 50px
+  #agrandar
+    min-height: 200px
+    min-width: 200px
+.map-container
+  display: flex
+  flex-direction: column
+  min-height: 500px
+  h3
+    color: $black
+    font-size: 2em
+    text-align: center
+    margin-bottom: 2em
+  .mapa
+    min-height: 500px
+    margin-bottom: 0
+    display: block
+    pointer-events: none
+    position: relative
+  .clicked
+    pointer-events: auto
+
 
   @media screen and (max-width: 650px)
     label

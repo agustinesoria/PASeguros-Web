@@ -6,12 +6,7 @@ block append style
   link(href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css", rel="stylesheet")
   link(href="./css/index.css", rel="stylesheet")
 block append script
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js')
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js')
   script(src="./js/index.js")
-  script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
-  script(type='text/javascript', src='https://embedmaps.com/google-maps-authorization/script.js?id=578211ec95ee84eda009d94bc38080aecb364879')
-  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZBxAVO5dq0vvA4pQsf5gogv4jUQ_cSek")
 block content
   section.portada(style='background-image:url(https://6sigma.com/wp-content/uploads/2013/08/6Sigma_slideroption2.jpg)')
     .presentacion
@@ -20,18 +15,19 @@ block content
   section.empresas
     h3 Trabajamos con las empresas más experimentadas
     .logos
-      a(href="https://www.elnorte.com.ar/",target="_blank")
-        img.norte(src="/img/norteimg.jpg" alt="El Norte Seguros")
-      a(href="http://www.beneficioweb.com.ar/",target="_blank")
-        img.beneficio(src="/img/beneficio_marca.png" alt="Beneficio Seguros")
-      a(href="http://www.escudoseguros.com.ar/",target="_blank")
-        img.escudo(src="/img/escudopng.png" alt="Escudo Seguros")
       a(href="http://www.liderarseguros.com.ar/",target="_blank")
-        img.liderar(src="/img/liderarpng.png" alt="Liderar Seguros")
+        img(src="/img/liderar.png" alt="Liderar Seguros")
+      a(href="http://www.escudoseguros.com.ar/",target="_blank")
+        img(src="/img/escudo.png" alt="Escudo Seguros")
+      a(href="http://www.beneficioweb.com.ar/",target="_blank")
+        img(src="/img/beneficio.png" alt="Beneficio Seguros")
+    .logos
       a(href="http://www.liderarart.com.ar/", target="_blank")
-        img.liderarart(src="/img/logosolo.jpg")
+        img(src="/img/liderarart.jpg")
+      a(href="https://www.elnorte.com.ar/",target="_blank")
+        img(src="/img/norte.jpg" alt="El Norte Seguros")
       a(href="https://www.prudenciaseguros.com.ar/", target="_blank")
-        img.liderarart(src="/img/prudencialogo.png")
+        img(src="/img/prudencia.png")
   section.servicios
     h3 Ofrecemos una gran variedad de seguros
     main
@@ -41,25 +37,38 @@ block content
       label(for='tab2') Transporte de pasajeros
       input#tab3(type='radio', name='tabs')
       label(for='tab3') Transporte de mercaderia
-      input#tab4(type='radio', name='tabs')
-      label(for='tab4') Incendio
-      input#tab5(type='radio', name='tabs')
-      label(for='tab5') Robo
+      //- input#tab4(type='radio', name='tabs')
+      //- label(for='tab4') Incendio
+      //- input#tab5(type='radio', name='tabs')
+      //- label(for='tab5') Robo
       input#tab6(type='radio', name='tabs')
       label(for='tab6') Hogar
       input#tab7(type='radio', name='tabs')
       label(for='tab7') Interior de Comercio e Industria
-      input#tab8(type='radio', name='tabs')
-      label(for='tab8') Cristales
+      //- input#tab8(type='radio', name='tabs')
+      //- label(for='tab8') Cristales
       input#tab9(type='radio', name='tabs')
       label(for='tab9') Responsabilidad Civil en Eventos
       input#tab10(type='radio', name='tabs')
       label(for='tab10') Caución
       section#content1
-        p
-          | Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-        p
-          | Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+        .categorias
+          .categoria 
+            h4 RESPONSABILIDAD CIVIL
+            p Seguro básico obligatorio que lo cubrirá contra daños a terceros.
+            a(href='/servicios.html') Ver más
+          .categoria 
+            h4 INCENDIO
+            p Protega su vehiculo de daños materiales producidos por incendio parcial o total.
+            a(href='/servicios.html') Ver más
+          .categoria 
+            h4 ROBO
+            p Protegase del robo producido por fuerza o intimidación.
+            a(href='/servicios.html') Ver más
+          .categoria 
+            h4 CRISTALES
+            p Protega los cristales de su vehiculo con esta cobertura.
+            a(href='/servicios.html') Ver más 
       section#content2
         p
           | Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
@@ -93,24 +102,18 @@ block content
       section#content10
         p
           | Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-
-  //- section.swiper-container
-  //-   .swiper-wrapper
-  //-     .swiper-slide(style='background-image:url(/img/car.jpg)') Asegura tus vehiculos
-  //-       a(href='/servicios.html#Vehiculos')
-  //-         button.btn.btn-success.btn-lg
-  //-           | Conoce más
-  //-     .swiper-slide(style='background-image:url(/img/fam.jpg)')  Asegura tu familia
-  //-       a(href='/servicios.html#Vida')
-  //-         button.btn.btn-success.btn-lg
-  //-           | Conoce más
-  //-     .swiper-slide(style='background-image:url(http://www.archipro.co.nz/assets/Uploads/_resampled/background-Kuaotunu-House-2.jpg)') Asegura tu hogar
-  //-       a(href='/servicios.html#Hogar')
-  //-         button.btn.btn-success.btn-lg
-  //-           | Conoce más
-  //-     .swiper-slide(style='background-image:url(http://www.deangroup-int.co.uk/wp-content/uploads/2015/10/female-engineer-in-the-field-iStock_000011202267_Medium-1024x768.jpg)') Asegura a tus empleados
-  //-       a(href='/servicios.html#Trabajo')
-  //-         button.btn.btn-success.btn-lg
-  //-           | Conoce más
   section.clientes
     h3 Ellos confian en nosotros
+    .logos
+      img(src="/img/basscor.png", alt="")
+      img#agrandar(src="/img/coata.jpg", alt="")
+      img#agrandar(src="/img/elturista.jpg", alt="")
+      img#agrandar(src="/img/FlechaBus.png", alt="")
+    .logos
+      img(src="/img/lacalera.png", alt="")
+      img(src="/img/lapalestina.png", alt="")
+      img(src="/img/perez.jpg", alt="")
+      img(src="/img/villanueva.png", alt="")
+  section.map-container
+    h3 Encontranos en Buenos Aires 660 - Villa María (Cba)
+    iframe.mapa(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.193823926106!2d-63.249933484222204!3d-32.413965852452456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cc42e1ae2e8341%3A0xd1f7005207857eba!2sBuenos+Aires+660%2C+Villa+Mar%C3%ADa%2C+C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1480372202214" frameborder="0" allowfullscreen)
