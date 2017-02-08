@@ -73,29 +73,38 @@ body
 
   section
     display: none
-    padding: 20px 0 0
     border-top: 1px solid #ddd
     font-family: Open Sans
   .categorias
-    margin: 100px 0
+    min-height: 600px
     display: flex
-    flex-direction: row
     justify-content: space-around
-    color: black
+    color: white
     .categoria
-      border-radius: 30px
-      width: 30%
+      width: 100%
+      align-items: center
       text-align: center
-      padding: 20px 0 20px 0
-      margin: 10px
+      // padding: 20px 0 20px 0
+      background-size: cover
+      background-position: center
+      repeat: no-repeat
+      .info
+        font-size: 1.2em
+        z-index: 2000
+        background: rgba(43, 45, 48, 0.7)
+        // margin: 10em 1em
+        // min-height: 250px
+        height: 100%
+        width: 100%
+        padding-top: 10em
       h4
+        font-size: 1.3em
         font-weight: bold
-        margin-bottom: 20px
-      p
-        text-align: left
+        margin-bottom: 2em
       a
         font-size: 1.5em
         text-decoration: none
+        color: #40a6ff
         &:after
           font-family: fontawesome
           margin-left: 10px
@@ -110,7 +119,7 @@ body
     font-weight: 600
     text-align: center
     border: 1px solid transparent
-    font-size: 1em
+    font-family: Open Sans
     &:before
       font-family: fontawesome
       font-weight: normal
@@ -122,16 +131,16 @@ body
       content: '\f207'
     &[for*='3']:before
       content: '\f0d1'
-    &[for*='4']:before
-      content: '\f134'
-    &[for*='5']:before
+    // &[for*='4']:before
+    //   content: '\f134'
+    // &[for*='5']:before
       content: '\f023'
     &[for*='6']:before
       content: '\f015'
     &[for*='7']:before
       content: '\f1ad'
-    &[for*='8']:before
-      content: '\f134'
+    // &[for*='8']:before
+      // content: '\f134'
     &[for*='9']:before
       content: '\f0c0'
     &[for*='10']:before
