@@ -10,6 +10,8 @@ footer
   min-height: 500px
   color: #EEEEEE
   padding-top: 5em
+  @media screen and (max-width: 670px)
+    flex-direction: column-reverse
   span
     width: 2em
   a
@@ -18,16 +20,19 @@ footer
     &:hover
       color: #FE5757
       text-decoration: none
-  h3
+  h4
     font-family: Exo
     font-size: 1.3em
-    font-weight: bold
 .contacto
   font-size: 1.1em
+  @media screen and (max-width: 670px)
+    margin-bottom: 2em
 
 .horarios
   line-height: 25px
   font-size: 1.1em
+  @media screen and (max-width: 670px)
+    margin-bottom: 2em
 // .pie
 //   align-self: flex-end
 //   font-size: 1em

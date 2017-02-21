@@ -2,7 +2,7 @@
 @import "../../modules/navbar/navbar.sass"
 @import "../../modules/footer/footer.sass"
 body
-  display: flex
+  // display: flex
   background-color: white
 //DESIGN
 .portada
@@ -17,29 +17,28 @@ body
   .presentacion
     color: $black
     margin-left: 3em
+    text-align: right
     h1
       font-size: 5em
-      text-align: right
     h2
       font-size: 2em
-      text-align: right
+    .btn
+      margin: 10px
+      &:after
+        font-family: fontawesome
+        margin-left: 10px
+        content: '\f061'
 .empresas
   color: $black
-  display: flex
+  display: block
   font-size: 2em
-  flex-direction: column
   min-height: 250px
   text-align: center
   margin-bottom: 100px
-  justify-content: space-around
   h3
     color: $black
     font-size: 1em
   .logos
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-around
     margin: auto
     margin-top: 40px
   img
@@ -80,6 +79,8 @@ body
     display: flex
     justify-content: space-around
     color: white
+    @media screen and (max-width: 1195px)
+      flex-direction: column
     .categoria
       width: 100%
       align-items: center
@@ -97,6 +98,8 @@ body
         height: 100%
         width: 100%
         padding-top: 10em
+        @media screen and (max-width: 1195px)
+          padding-bottom: 4em
       h4
         font-size: 1.3em
         font-weight: bold
@@ -186,19 +189,26 @@ body
   display: flex
   flex-direction: column
   min-height: 500px
+  text-align: center
   h3
     color: $black
     font-size: 2em
-    text-align: center
-    margin-bottom: 2em
+    margin-bottom: .5em
   .mapa
     min-height: 500px
     margin-bottom: 0
+    margin-top: 10px
     display: block
     pointer-events: none
     position: relative
   .clicked
     pointer-events: auto
+
+  @media screen and (max-width: 1024px)
+    .empresas
+      img
+        display: block
+        margin: 4em auto
 
 
   @media screen and (max-width: 650px)
